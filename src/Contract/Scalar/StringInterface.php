@@ -8,4 +8,5 @@ use HypnoTox\Scalar\Contract\ScalarInterface;
 
 interface StringInterface extends ScalarInterface
 {
+    public function substring(int $offset, ?int $length = null): string;
 }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Object;
 
+use HypnoTox\Scalar\Contract\Scalar\StringInterface;
 use HypnoTox\Scalar\Object\StringObject;
 use Tests\Contract\ScalarInterfaceTest;
 
@@ -14,10 +15,14 @@ class StringObjectTest extends ScalarInterfaceTest
         return new StringObject('test');
     }
 
-    public function testIsStringable(): void
+    public function testSubstring()
     {
         $string = $this->getTestObject();
 
-        $this->assertSame('test', (string) $string);
+        $this->assertInstanceOf(StringInterface::class, $string);
+        $this->assertSame('est', $string->substring(1));
+        $this->assertSame('es', $string->substring(1, 2));
+        $this->assertSame('te', $string->substring(0, -2));
+        $this->assertSame('test', $string->getValue());
     }
 }
