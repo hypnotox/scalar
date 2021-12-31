@@ -6,7 +6,7 @@
 [![Packagist PHP Version Support](https://badgen.net/packagist/php/hypnotox/scalars)](https://packagist.org/packages/hypnotox/pack)
 [![GitHub](https://badgen.net/packagist/license/hypnotox/scalars)](/LICENSE.md)
 
-A collection library offering immutable scalar object.
+A library offering immutable scalar objects.
 
 This is just a personal project. It will follow semantic versioning and will be stable, but don't expect constant development, especially when it is declared feature complete.
 
