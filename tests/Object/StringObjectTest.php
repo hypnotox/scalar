@@ -8,6 +8,9 @@ use HypnoTox\Scalar\Contract\Scalar\StringInterface;
 use HypnoTox\Scalar\Object\StringObject;
 use Tests\Contract\ScalarInterfaceTest;
 
+/**
+ * @extends ScalarInterfaceTest<string>
+ */
 class StringObjectTest extends ScalarInterfaceTest
 {
     protected function getTestObject(): StringObject

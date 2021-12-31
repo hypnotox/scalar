@@ -7,6 +7,9 @@ namespace Tests\Object;
 use HypnoTox\Scalar\Object\NumberObject;
 use Tests\Contract\ScalarInterfaceTest;
 
+/**
+ * @extends ScalarInterfaceTest<int>
+ */
 class NumberObjectTest extends ScalarInterfaceTest
 {
     protected function getTestObject(): NumberObject
@@ -19,7 +22,7 @@ class NumberObjectTest extends ScalarInterfaceTest
         return 100;
     }
 
-    public function testCalculationMethods()
+    public function testCalculationMethods(): void
     {
         $object = $this->getTestObject();
         $value = $this->getTestValue();

@@ -7,10 +7,16 @@ namespace Tests\Contract;
 use HypnoTox\Scalar\Contract\ScalarInterface;
 use Tests\BaseTest;
 
+/**
+ * @template T
+ */
 abstract class ScalarInterfaceTest extends BaseTest
 {
     abstract protected function getTestObject(): ScalarInterface;
 
+    /**
+     * @return T
+     */
     abstract protected function getTestValue(): mixed;
 
     public function testCanConstructAndGetValue(): void
