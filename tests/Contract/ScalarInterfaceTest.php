@@ -11,17 +11,21 @@ abstract class ScalarInterfaceTest extends BaseTest
 {
     abstract protected function getTestObject(): ScalarInterface;
 
+    abstract protected function getTestValue(): mixed;
+
     public function testCanConstructAndGetValue(): void
     {
-        $string = $this->getTestObject();
+        $object = $this->getTestObject();
+        $value = $this->getTestValue();
 
-        $this->assertSame('test', $string->getValue());
+        $this->assertSame($value, $object->getValue());
     }
 
     public function testIsStringable(): void
     {
-        $string = $this->getTestObject();
+        $object = $this->getTestObject();
+        $value = $this->getTestValue();
 
-        $this->assertSame('test', (string) $string);
+        $this->assertSame((string) $value, (string) $object);
     }
 }

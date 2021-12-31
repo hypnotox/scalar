@@ -12,10 +12,15 @@ class StringObjectTest extends ScalarInterfaceTest
 {
     protected function getTestObject(): StringObject
     {
-        return new StringObject('test');
+        return new StringObject($this->getTestValue());
     }
 
-    public function testSubstring()
+    protected function getTestValue(): string
+    {
+        return 'test';
+    }
+
+    public function testSubstring(): void
     {
         $string = $this->getTestObject();
 

@@ -7,10 +7,15 @@ namespace HypnoTox\Scalar\Object;
 use HypnoTox\Scalar\Contract\Scalar\StringInterface;
 use HypnoTox\Scalar\Contract\ScalarInterface;
 
+/**
+ * @psalm-immutable
+ * @psalm-consistent-constructor
+ * @psalm-consistent-templates
+ */
 class StringObject implements ScalarInterface, StringInterface
 {
     public function __construct(
-        public readonly string $value,
+        private readonly string $value,
     ) {
     }
 
@@ -19,6 +24,15 @@ class StringObject implements ScalarInterface, StringInterface
         return $this->value;
     }
 
+    public function __toString(): string
+    {
+        return $this->value;
+    }
+
+    /*
+     * StringInterface
+     */
+
     public function substring(int $offset, ?int $length = null): string
     {
         if ($length) {
@@ -26,10 +40,5 @@ class StringObject implements ScalarInterface, StringInterface
         }
 
         return substr((string) $this, $offset);
-    }
-
-    public function __toString()
-    {
-        return $this->value;
     }
 }
