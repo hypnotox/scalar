@@ -33,12 +33,40 @@ class StringObject implements ScalarInterface, StringInterface
      * StringInterface
      */
 
-    public function substring(int $offset, ?int $length = null): string
+    /*
+     * Non chainable methods
+     */
+
+    public function contains(string $needle): bool
+    {
+        return str_contains($this->value, $needle);
+    }
+
+    public function startsWith(string $needle): bool
+    {
+        return str_starts_with($this->value, $needle);
+    }
+
+    public function endsWith(string $needle): bool
+    {
+        return str_ends_with($this->value, $needle);
+    }
+
+    public function length(): int
+    {
+        return \strlen($this->value);
+    }
+
+    /*
+     * Chainable methods
+     */
+
+    public function substring(int $offset, ?int $length = null): static
     {
         if ($length) {
-            return substr((string) $this, $offset, $length);
+            return new static(substr((string) $this, $offset, $length));
         }
 
-        return substr((string) $this, $offset);
+        return new static(substr((string) $this, $offset));
     }
 }

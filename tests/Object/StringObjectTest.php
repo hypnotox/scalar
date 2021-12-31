@@ -28,9 +28,9 @@ class StringObjectTest extends ScalarInterfaceTest
         $string = $this->getTestObject();
 
         $this->assertInstanceOf(StringInterface::class, $string);
-        $this->assertSame('est', $string->substring(1));
-        $this->assertSame('es', $string->substring(1, 2));
-        $this->assertSame('te', $string->substring(0, -2));
+        $this->assertSame('est', $string->substring(1)->getValue());
+        $this->assertSame('es', $string->substring(1, 2)->getValue());
+        $this->assertSame('te', $string->substring(0, -2)->getValue());
         $this->assertSame('test', $string->getValue());
     }
 }

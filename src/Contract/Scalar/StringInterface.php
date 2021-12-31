@@ -15,5 +15,21 @@ interface StringInterface extends ScalarInterface
 {
     public function getValue(): string;
 
-    public function substring(int $offset, ?int $length = null): string;
+    /*
+     * Non chainable methods
+     */
+
+    public function contains(string $needle): bool;
+
+    public function startsWith(string $needle): bool;
+
+    public function endsWith(string $needle): bool;
+
+    public function length(): int;
+
+    /*
+     * Chainable methods
+     */
+
+    public function substring(int $offset, ?int $length = null): self;
 }
