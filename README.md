@@ -1,10 +1,10 @@
 # hypnotox/scalars
 
-![CI Status](https://github.com/hypnotox/scalars/actions/workflows/ci.yml/badge.svg)
-![Code Coverage](https://badgen.net/codecov/c/github/hypnotox/scalars)
-![Packagist Version](https://badgen.net/packagist/v/hypnotox/scalars)
-![Packagist PHP Version Support](https://badgen.net/packagist/php/hypnotox/scalars)
-![GitHub](https://badgen.net/packagist/license/hypnotox/scalars)
+[![CI Status](https://github.com/hypnotox/scalars/actions/workflows/ci.yml/badge.svg)](https://github.com/hypnotox/scalars)
+[![Code Coverage](https://codecov.io/gh/hypnotox/scalars/branch/main/graph/badge.svg?token=FrsdlOIbRo)](https://codecov.io/gh/hypnotox/scalars)
+[![Packagist Version](https://badgen.net/packagist/v/hypnotox/scalars)](https://packagist.org/packages/hypnotox/pack)
+[![Packagist PHP Version Support](https://badgen.net/packagist/php/hypnotox/scalars)](https://packagist.org/packages/hypnotox/pack)
+[![GitHub](https://badgen.net/packagist/license/hypnotox/scalars)](/LICENSE.md)
 
 A collection library offering immutable scalar object.
 
