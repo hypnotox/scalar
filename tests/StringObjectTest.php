@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use HypnoTox\Scalars\StringObject;
+use HypnoTox\Scalars\Object\StringObject;
 
 class StringObjectTest extends BaseTest
 {

@@ -1,6 +1,6 @@
 {
-	"name": "hypnotox/scalars",
-	"description": "PHP package offering immutable scalar object.",
+	"name": "hypnotox/scalar",
+	"description": "PHP package offering immutable scalar objects.",
 	"type": "library",
 	"license": "MIT",
 	"authors": [
@@ -18,7 +18,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"HypnoTox\\Scalars\\": "src/"
+			"HypnoTox\\Scalar\\": "src/"
 		}
 	},
 	"autoload-dev": {

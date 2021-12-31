@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace HypnoTox\Scalars;
+namespace HypnoTox\Scalars\Contract;
 
 interface ScalarInterface extends \Stringable
 {
