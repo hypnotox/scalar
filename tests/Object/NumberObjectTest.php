@@ -23,11 +23,13 @@ class NumberObjectTest extends ScalarInterfaceTest
     {
         $object = $this->getTestObject();
         $value = $this->getTestValue();
+        $otherObject = new NumberObject(10);
 
         $this->assertSame($value, $object->add(0)->getValue());
         $this->assertSame($value - 10, $object->subtract(10)->getValue());
         $this->assertSame($value * 3, $object->multiply(3)->getValue());
         $this->assertSame($value / 2, $object->divide(2)->getValue());
+        $this->assertSame($otherObject->getValue() + $object->getValue(), $object->add($otherObject)->getValue());
         $this->assertSame($value, $object->getValue());
     }
 }
