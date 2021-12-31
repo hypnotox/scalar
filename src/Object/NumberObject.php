@@ -33,15 +33,6 @@ class NumberObject implements ScalarInterface, NumberInterface
      * NumberInterface
      */
 
-    protected function resolveNumber(NumberInterface|float|int $number): int
-    {
-        if ($number instanceof NumberInterface) {
-            $number = $number->getValue();
-        }
-
-        return (int) $number;
-    }
-
     public function add(NumberInterface|float|int $number): static
     {
         return new static($this->value + $this->resolveNumber($number));
@@ -60,5 +51,18 @@ class NumberObject implements ScalarInterface, NumberInterface
     public function divide(NumberInterface|float|int $number): static
     {
         return new static($this->value / $this->resolveNumber($number));
+    }
+
+    /*
+     * Helper
+     */
+
+    protected function resolveNumber(NumberInterface|float|int $number): int
+    {
+        if ($number instanceof NumberInterface) {
+            $number = $number->getValue();
+        }
+
+        return (int) $number;
     }
 }
