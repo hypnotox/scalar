@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace HypnoTox\Scalars\Object;
+namespace HypnoTox\Scalar\Object;
 
-use HypnoTox\Scalars\Contract\ScalarInterface;
+use HypnoTox\Scalar\Contract\ScalarInterface;
 
 class StringObject implements ScalarInterface
 {
