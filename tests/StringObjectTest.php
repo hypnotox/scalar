@@ -20,14 +20,14 @@ class StringObjectTest extends BaseTest
         $this->assertInstanceOf(StringObject::class, $string);
     }
 
-    public function testCanGetValue()
+    public function testCanGetValue(): void
     {
         $string = $this->getTestObject();
 
         $this->assertSame('test', $string->getValue());
     }
 
-    public function testIsStringable()
+    public function testIsStringable(): void
     {
         $string = $this->getTestObject();
 
