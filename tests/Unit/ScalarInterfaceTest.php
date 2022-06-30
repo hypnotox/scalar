@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Contract;
+namespace Tests\Unit;
 
 use HypnoTox\Scalar\Contract\ScalarInterface;
-use Tests\BaseTest;
+use Tests\Unit\BaseTest;
 
 /**
  * @template T

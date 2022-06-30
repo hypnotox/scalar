@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\Object;
+namespace Tests\Unit\Object;
 
 use HypnoTox\Scalar\Contract\Scalar\StringInterface;
 use HypnoTox\Scalar\Object\StringObject;
-use Tests\Contract\ScalarInterfaceTest;
+use Tests\Unit\ScalarInterfaceTest;
 
 /**
  * @extends ScalarInterfaceTest<string>

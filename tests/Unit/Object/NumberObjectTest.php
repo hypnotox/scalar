@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Object;
+namespace Tests\Unit\Object;
 
 use HypnoTox\Scalar\Object\NumberObject;
-use Tests\Contract\ScalarInterfaceTest;
+use Tests\Unit\ScalarInterfaceTest;
 
 /**
  * @extends ScalarInterfaceTest<int>
