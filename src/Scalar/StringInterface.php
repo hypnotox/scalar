@@ -9,12 +9,9 @@ use HypnoTox\Scalar\ScalarInterface;
 /**
  * @extends ScalarInterface<string>
  * @psalm-immutable
- * @psalm-consistent-templates
  */
 interface StringInterface extends ScalarInterface
 {
-    public function getValue(): string;
-
     /*
      * Non chainable methods
      */

@@ -8,13 +8,14 @@ use HypnoTox\Scalar\Scalar\StringInterface;
 
 /**
  * @psalm-immutable
- * @psalm-consistent-constructor
- * @psalm-consistent-templates
  */
-final class StringObject implements ScalarInterface, StringInterface
+final class StringObject implements StringInterface
 {
+    /**
+     * @param string $value
+     */
     public function __construct(
-        private readonly string $value,
+        private readonly mixed $value,
     ) {
     }
 
@@ -60,7 +61,7 @@ final class StringObject implements ScalarInterface, StringInterface
      * Chainable methods
      */
 
-    public function substring(int $offset, ?int $length = null): static
+    public function substring(int $offset, ?int $length = null): self
     {
         if ($length) {
             return new self(substr((string) $this, $offset, $length));

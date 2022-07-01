@@ -8,10 +8,14 @@ namespace HypnoTox\Scalar;
  * @template T
  *
  * @psalm-immutable
- * @psalm-consistent-templates
  */
 interface ScalarInterface extends \Stringable
 {
+    /**
+     * @param T $value
+     */
+    public function __construct(mixed $value);
+
     /**
      * @return T
      */

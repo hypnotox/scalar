@@ -8,13 +8,14 @@ use HypnoTox\Scalar\Scalar\NumberInterface;
 
 /**
  * @psalm-immutable
- * @psalm-consistent-constructor
- * @psalm-consistent-templates
  */
-final class NumberObject implements NumberInterface, ScalarInterface
+final class NumberObject implements NumberInterface
 {
+    /**
+     * @param int|float $value
+     */
     public function __construct(
-        private readonly int|float $value,
+        private readonly mixed $value,
     ) {
     }
 
@@ -32,24 +33,24 @@ final class NumberObject implements NumberInterface, ScalarInterface
      * NumberInterface
      */
 
-    public function add(NumberInterface|float|int $number): static
+    public function add(NumberInterface|float|int $number): self
     {
         return new self($this->value + $this->resolveNumber($number));
     }
 
-    public function subtract(NumberInterface|float|int $number): static
+    public function subtract(NumberInterface|float|int $number): self
     {
-        return new static($this->value - $this->resolveNumber($number));
+        return new self($this->value - $this->resolveNumber($number));
     }
 
-    public function multiply(NumberInterface|float|int $number): static
+    public function multiply(NumberInterface|float|int $number): self
     {
-        return new static($this->value * $this->resolveNumber($number));
+        return new self($this->value * $this->resolveNumber($number));
     }
 
-    public function divide(NumberInterface|float|int $number): static
+    public function divide(NumberInterface|float|int $number): self
     {
-        return new static($this->value / $this->resolveNumber($number));
+        return new self($this->value / $this->resolveNumber($number));
     }
 
     /*
