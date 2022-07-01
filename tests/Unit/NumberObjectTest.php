@@ -2,15 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Object;
+namespace Tests\Unit;
 
-use HypnoTox\Scalar\Object\NumberObject;
-use Tests\Unit\ScalarInterfaceTest;
+use HypnoTox\Scalar\NumberObject;
 
 /**
  * @extends ScalarInterfaceTest<int>
+ *
+ * @internal
  */
-class NumberObjectTest extends ScalarInterfaceTest
+final class NumberObjectTest extends ScalarInterfaceTest
 {
     protected function getTestObject(): NumberObject
     {

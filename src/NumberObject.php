@@ -2,17 +2,16 @@
 
 declare(strict_types=1);
 
-namespace HypnoTox\Scalar\Object;
+namespace HypnoTox\Scalar;
 
-use HypnoTox\Scalar\Contract\Scalar\NumberInterface;
-use HypnoTox\Scalar\Contract\ScalarInterface;
+use HypnoTox\Scalar\Scalar\NumberInterface;
 
 /**
  * @psalm-immutable
  * @psalm-consistent-constructor
  * @psalm-consistent-templates
  */
-class NumberObject implements ScalarInterface, NumberInterface
+final class NumberObject implements NumberInterface, ScalarInterface
 {
     public function __construct(
         private readonly int|float $value,
@@ -35,7 +34,7 @@ class NumberObject implements ScalarInterface, NumberInterface
 
     public function add(NumberInterface|float|int $number): static
     {
-        return new static($this->value + $this->resolveNumber($number));
+        return new self($this->value + $this->resolveNumber($number));
     }
 
     public function subtract(NumberInterface|float|int $number): static
@@ -57,7 +56,7 @@ class NumberObject implements ScalarInterface, NumberInterface
      * Helper
      */
 
-    protected function resolveNumber(NumberInterface|float|int $number): int
+    private function resolveNumber(NumberInterface|float|int $number): int
     {
         if ($number instanceof NumberInterface) {
             $number = $number->getValue();

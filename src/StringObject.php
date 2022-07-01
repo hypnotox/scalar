@@ -2,17 +2,16 @@
 
 declare(strict_types=1);
 
-namespace HypnoTox\Scalar\Object;
+namespace HypnoTox\Scalar;
 
-use HypnoTox\Scalar\Contract\Scalar\StringInterface;
-use HypnoTox\Scalar\Contract\ScalarInterface;
+use HypnoTox\Scalar\Scalar\StringInterface;
 
 /**
  * @psalm-immutable
  * @psalm-consistent-constructor
  * @psalm-consistent-templates
  */
-class StringObject implements ScalarInterface, StringInterface
+final class StringObject implements ScalarInterface, StringInterface
 {
     public function __construct(
         private readonly string $value,
@@ -64,9 +63,9 @@ class StringObject implements ScalarInterface, StringInterface
     public function substring(int $offset, ?int $length = null): static
     {
         if ($length) {
-            return new static(substr((string) $this, $offset, $length));
+            return new self(substr((string) $this, $offset, $length));
         }
 
-        return new static(substr((string) $this, $offset));
+        return new self(substr((string) $this, $offset));
     }
 }

@@ -2,16 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Object;
+namespace Tests\Unit;
 
-use HypnoTox\Scalar\Contract\Scalar\StringInterface;
-use HypnoTox\Scalar\Object\StringObject;
-use Tests\Unit\ScalarInterfaceTest;
+use HypnoTox\Scalar\Scalar\StringInterface;
+use HypnoTox\Scalar\StringObject;
 
 /**
  * @extends ScalarInterfaceTest<string>
+ *
+ * @internal
  */
-class StringObjectTest extends ScalarInterfaceTest
+final class StringObjectTest extends ScalarInterfaceTest
 {
     protected function getTestObject(): StringObject
     {

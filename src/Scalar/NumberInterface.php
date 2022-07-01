@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace HypnoTox\Scalar\Contract\Scalar;
+namespace HypnoTox\Scalar\Scalar;
 
-use HypnoTox\Scalar\Contract\ScalarInterface;
+use HypnoTox\Scalar\ScalarInterface;
 
 /**
  * @extends ScalarInterface<int|float>
