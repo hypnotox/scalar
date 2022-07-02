@@ -6,6 +6,7 @@ namespace Tests\Unit;
 
 use HypnoTox\Scalar\Object\Contract\StringInterface;
 use HypnoTox\Scalar\Object\StringObject;
+use Tests\Unit\Contract\ScalarInterfaceTest;
 
 /**
  * @extends ScalarInterfaceTest<string>

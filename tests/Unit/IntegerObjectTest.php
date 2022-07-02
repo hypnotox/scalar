@@ -6,6 +6,7 @@ namespace Tests\Unit;
 
 use HypnoTox\Scalar\Object\Contract\AbstractNumberObject;
 use HypnoTox\Scalar\Object\IntegerObject;
+use Tests\Unit\Contract\AbstractNumberObjectTest;
 
 /**
  * @extends AbstractNumberObjectTest<int>

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit;
+namespace Tests\Unit\Contract;
 
 use HypnoTox\Scalar\Object\Contract\ScalarInterface;
 
