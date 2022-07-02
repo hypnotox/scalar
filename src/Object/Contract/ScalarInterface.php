@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace HypnoTox\Scalar;
+namespace HypnoTox\Scalar\Object\Contract;
 
 /**
  * @template T

@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace HypnoTox\Scalar;
+namespace HypnoTox\Scalar\Object;
+
+use HypnoTox\Scalar\Object\Contract\StringInterface;
 
 /**
  * @psalm-immutable

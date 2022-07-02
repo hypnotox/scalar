@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
-use HypnoTox\Scalar\ScalarInterface;
+use HypnoTox\Scalar\Object\Contract\ScalarInterface;
 
 /**
  * @template T

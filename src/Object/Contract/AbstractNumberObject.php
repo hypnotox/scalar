@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
-namespace HypnoTox\Scalar;
+namespace HypnoTox\Scalar\Object\Contract;
+
+use HypnoTox\Scalar\Object\FloatObject;
+use HypnoTox\Scalar\Object\IntegerObject;
 
 /**
  * @template T as int|float

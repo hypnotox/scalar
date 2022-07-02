@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
-use HypnoTox\Scalar\BooleanObject;
+use HypnoTox\Scalar\Object\BooleanObject;
 
 /**
  * @extends ScalarInterfaceTest<string>

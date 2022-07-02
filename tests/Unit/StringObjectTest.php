@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
-use HypnoTox\Scalar\StringInterface;
-use HypnoTox\Scalar\StringObject;
+use HypnoTox\Scalar\Object\Contract\StringInterface;
+use HypnoTox\Scalar\Object\StringObject;
 
 /**
  * @extends ScalarInterfaceTest<string>

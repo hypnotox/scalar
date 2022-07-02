@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
-use HypnoTox\Scalar\AbstractNumberObject;
-use HypnoTox\Scalar\IntegerObject;
+use HypnoTox\Scalar\Object\Contract\AbstractNumberObject;
+use HypnoTox\Scalar\Object\IntegerObject;
 
 /**
  * @extends AbstractNumberObjectTest<int>
