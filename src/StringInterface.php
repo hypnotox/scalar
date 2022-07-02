@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-namespace HypnoTox\Scalar\Scalar;
-
-use HypnoTox\Scalar\ScalarInterface;
+namespace HypnoTox\Scalar;
 
 /**
  * @extends ScalarInterface<string>

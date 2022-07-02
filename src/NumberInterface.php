@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace HypnoTox\Scalar\Scalar;
-
-use HypnoTox\Scalar\ScalarInterface;
+namespace HypnoTox\Scalar;
 
 /**
- * @extends ScalarInterface<int|float>
+ * @template T as int|float
+ *
+ * @extends ScalarInterface<T>
  * @psalm-immutable
  */
 interface NumberInterface extends ScalarInterface

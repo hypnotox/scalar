@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace HypnoTox\Scalar;
 
-use HypnoTox\Scalar\Scalar\BooleanInterface;
-
 /**
  * @psalm-immutable
  * @psalm-consistent-constructor

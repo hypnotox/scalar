@@ -4,30 +4,27 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
-use HypnoTox\Scalar\NumberObject;
+use HypnoTox\Scalar\AbstractNumberObject;
+use HypnoTox\Scalar\IntegerObject;
 
 /**
- * @extends ScalarInterfaceTest<int>
+ * @template T of int|float
+ *
+ * @extends ScalarInterfaceTest<T>
  *
  * @internal
  */
-final class NumberObjectTest extends ScalarInterfaceTest
+abstract class AbstractNumberObjectTest extends ScalarInterfaceTest
 {
-    protected function getTestObject(): NumberObject
-    {
-        return new NumberObject($this->getTestValue());
-    }
+    abstract protected function getTestObject(): AbstractNumberObject;
 
-    protected function getTestValue(): int
-    {
-        return 100;
-    }
+    abstract protected function getTestValue(): int|float;
 
     public function testCalculationMethods(): void
     {
         $object = $this->getTestObject();
         $value = $this->getTestValue();
-        $otherObject = new NumberObject(10);
+        $otherObject = new IntegerObject(10);
 
         $this->assertSame($value, $object->add(0)->getValue());
         $this->assertSame($value - 10, $object->subtract(10)->getValue());
